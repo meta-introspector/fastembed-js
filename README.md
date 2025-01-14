@@ -1,3 +1,12 @@
+# fork summary:
+
+1. there were issue with arm64 support for some dependencies
+2. the new patches are still in progress
+3. having problems pulling in the changes from git
+4. going to build as docker image and mount the files in.
+
+# original
+
 <div align="center">
   <h1><a href="https://www.npmjs.com/package/fastembed">FastEmbed-js ⚡️</a></h1>
   <h3>Typescript/NodeJS implementation of <a href="https://github.com/qdrant/fastembed" target="_blank">@Qdrant/fastembed</a></h3>
