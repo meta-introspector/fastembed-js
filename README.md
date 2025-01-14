@@ -1,9 +1,9 @@
 # fork summary:
 
-1. there were issue with arm64 support for some dependencies
-2. the new patches are still in progress
-3. having problems pulling in the changes from git
-4. going to build as docker image and mount the files in.
+1. There were issue with arm64 support for some dependencies
+2. The new patches are still in progress
+3. Having problems pulling in the changes from git
+4. Going to build as docker image and mount the files in.
 
 # original
 
