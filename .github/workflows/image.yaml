@@ -43,7 +43,7 @@ jobs:
             uses: meta-introspector/amazon-ecr-login@v1
           - uses: meta-introspector/create-ecr-repository-action@v1
             with:
-              repository: $env.ECR_REPOSITORY
+              repository: ${{ env.ECR_REPOSITORY }}
 
           - name: Set short sha
             id: sha_short
