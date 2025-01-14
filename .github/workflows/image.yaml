@@ -9,9 +9,8 @@ on:
 env:
     REGISTRY: ghcr.io
     IMAGE_NAME: ${{ github.repository }}
-    PROJECT: fastembed
-    ECR_REPOSITORY: fastembed
-    DOCKER_REPOSITORY: fastembed-js
+    ECR_REPOSITORY: nodemodules/fastembed
+    DOCKER_REPOSITORY: h4ckermike/fastembed-js
     SESSION_APP_NAME: fastembed
 
 jobs:
@@ -44,7 +43,7 @@ jobs:
             uses: meta-introspector/amazon-ecr-login@v1
           - uses: meta-introspector/create-ecr-repository-action@v1
             with:
-              repository: $env.PROJECT
+              repository: $env.ECR_REPOSITORY
 
           - name: Set short sha
             id: sha_short
@@ -72,7 +71,7 @@ jobs:
             with:
               images: |
                 ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-                h4ckermike/${{ env.DOCKER_REPOSITORY}}
+                ${{ env.DOCKER_REPOSITORY}}
                 ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY}}
                 
           - name: Build and push Docker image
